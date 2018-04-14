@@ -5,73 +5,33 @@ mkdir -p raw
 
 cd raw
 
-expect <<!
-set timeout -1
-spawn ftp ftp2.census.gov 
-expect "Name"
-send "anonymous\r"
-expect "Password:"
-send "anonymous@domain.com\r"
-expect "ftp>"
-send "get -r ./acs2002\r"
-expect "ftp>"
-send "get -r ./acs2003\r"
-expect "ftp>"
-send "get -r ./acs2004\r"
-expect "ftp>"
-send "get -r ./acs2005\r"
-expect "ftp>"
-send "get -r ./acs2005_2007_3yr\r"
-expect "ftp>"
-send "get -r ./acs2005_2009_5yr\r"
-expect "ftp>"
-send "get -r ./acs2006\r"
-expect "ftp>"
-send "get -r ./acs2006_2008_3yr\r"
-expect "ftp>"
-send "get -r ./acs2007_1yr\r"
-expect "ftp>"
-send "get -r ./acs2007_2009_3yr\r"
-expect "ftp>"
-send "get -r ./acs2007_3yr\r"
-expect "ftp>"
-send "get -r ./acs2008_1yr\r"
-expect "ftp>"
-send "get -r ./acs2008_3yr\r"
-expect "ftp>"
-send "get -r ./acs2009_1yr\r"
-expect "ftp>"
-send "get -r ./acs2009_3yr\r"
-expect "ftp>"
-send "get -r ./acs2009_5yr\r"
-expect "ftp>"
-send "get -r ./acs2010_1yr\r"
-expect "ftp>"
-send "get -r ./acs2010_3yr\r"
-expect "ftp>"
-send "get -r ./acs2010_5yr\r"
-expect "ftp>"
-send "get -r ./acs2010_SPT_AIAN\r"
-expect "ftp>"
-send "get -r ./acs2011_1yr\r"
-expect "ftp>"
-send "get -r ./acs2011_3yr\r"
-expect "ftp>"
-send "get -r ./acs2011_5yr\r"
-expect "ftp>"
-send "get -r ./acs2012_1yr\r"
-expect "ftp>"
-send "get -r ./acs2012_3yr\r"
-expect "ftp>"
-send "get -r ./acs2012_5yr\r"
-expect "ftp>"
-send "get -r ./acs2013_1yr\r"
-expect "ftp>"
-send "get -r ./acs2013_3yr\r"
-expect "ftp>"
-send "get -r ./acs2013_5yr\r"
-expect "ftp>"
-send "get -r ./geo\r"
-
-
-!
+wget -r ftp://ftp2.census.gov/acs2002
+wget -r ftp://ftp2.census.gov/acs2003
+wget -r ftp://ftp2.census.gov/acs2004
+wget -r ftp://ftp2.census.gov/acs2005
+wget -r ftp://ftp2.census.gov/acs2005_2007_3yr
+wget -r ftp://ftp2.census.gov/acs2005_2009_5yr
+wget -r ftp://ftp2.census.gov/acs2006
+wget -r ftp://ftp2.census.gov/acs2006_2008_3yr
+wget -r ftp://ftp2.census.gov/acs2007_1yr
+wget -r ftp://ftp2.census.gov/acs2007_2009_3yr
+wget -r ftp://ftp2.census.gov/acs2007_3yr
+wget -r ftp://ftp2.census.gov/acs2008_1yr
+wget -r ftp://ftp2.census.gov/acs2008_3yr
+wget -r ftp://ftp2.census.gov/acs2009_1yr
+wget -r ftp://ftp2.census.gov/acs2009_3yr
+wget -r ftp://ftp2.census.gov/acs2009_5yr
+wget -r ftp://ftp2.census.gov/acs2010_1yr
+wget -r ftp://ftp2.census.gov/acs2010_3yr
+wget -r ftp://ftp2.census.gov/acs2010_5yr
+wget -r ftp://ftp2.census.gov/acs2010_SPT_AIAN
+wget -r ftp://ftp2.census.gov/acs2011_1yr
+wget -r ftp://ftp2.census.gov/acs2011_3yr
+wget -r ftp://ftp2.census.gov/acs2011_5yr
+wget -r ftp://ftp2.census.gov/acs2012_1yr
+wget -r ftp://ftp2.census.gov/acs2012_3yr
+wget -r ftp://ftp2.census.gov/acs2012_5yr
+wget -r ftp://ftp2.census.gov/acs2013_1yr
+wget -r ftp://ftp2.census.gov/acs2013_3yr
+wget -r ftp://ftp2.census.gov/acs2013_5yr
+wget -r ftp://ftp2.census.gov/geo
